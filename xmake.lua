@@ -1,0 +1,10 @@
+add_rules("mode.debug", "mode.release")
+set_version("1.0.0")
+
+target("bsq")
+    set_kind("binary")
+    set_optimize("fastest")
+    add_cflags("-march=native")
+    set_languages("c17")
+    add_files("./main.c")
+    add_includedirs(".")
